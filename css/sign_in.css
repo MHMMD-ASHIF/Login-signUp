@@ -1,0 +1,953 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* background: url(./round.jpg); */
+    /* background-color: #000; */
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* position: fixed; */
+    height: 730px;
+}
+
+.background {
+
+    /* background-color: red; */
+
+    /* width:100% ; */
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: -1%;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+
+
+
+
+
+}
+
+.bg_color {
+    background-color: rgba(10, 10, 10, 0.819);
+    opacity: 1;
+    width: 1500px;
+    height: 750px;
+    /* position: fixed; */
+
+}
+
+main {
+    display: flex;
+    width: 100%;
+    /* height: 100vh; */
+    margin-bottom: 30px;
+}
+
+.main2 {
+    width: 50%;
+
+    /* background-color: blue; */
+    /* text-align: center; */
+}
+
+.overlay {
+    display: flex;
+
+}
+
+.overlay img {
+    width: 50px;
+    height: 50px;
+    margin-top: 40px;
+}
+
+p {
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+    font-size: 45px;
+    margin-left: 15px;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.overlay_text p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: -25px;
+    margin-left: 5px;
+}
+.Email_overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2a2929a5;
+    z-index: 3;
+    display: none;
+    /* display: none; */
+}
+.email_final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+
+}
+
+
+.email_verifying{
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    z-index: 4;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(111, 111, 111, 0.821);
+
+}
+
+.email_verifying h2{
+    text-align: center;
+    color: #505050e9;
+    letter-spacing: 1.05px;
+    margin-bottom: 30px;
+
+}
+.email_verifying p{
+    color: #505050d8;
+    letter-spacing: 1.05px;
+    line-height: 2;text-align: justify;
+   
+}
+.email_verifying .email_icon{
+    display: flex;
+    justify-content: space-between;
+}
+.email_verifying i{
+ 
+   margin-top: 15px;
+   margin-right: 0px;
+   border: 0px; 
+   font-size: 17px;
+   border-radius: 50%;
+   color: #505050cb;
+   cursor: pointer;
+}
+.email_verifying i:active{
+    transform: scale(.85);
+}
+.email_verifying .confirm_btn{
+    text-align: center;
+    line-height: 5;
+}
+.email_verifying .confirm_btn button{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #1473e6;
+    color: #fff;
+    outline: none;
+    box-shadow: 1px 1px 2px rgba(108, 107, 107, 0.696);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.05px;
+    cursor: pointer;
+}
+.email_verifying .confirm_btn button:active {
+    transform: scale(.99);
+}
+
+@media(max-width:1150px){
+    .email_final{
+        display: block;
+        
+        
+    }
+    .email_verifying{
+        width: 430px;
+        height: 260px;
+        margin-left: 10px;
+        margin-top: 200px;
+    }
+    .email_verifying p{
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-top: -10px;
+    }
+    .email_verifying .confirm_btn{
+        line-height: 2;
+    }
+} 
+@media(max-width:450px){
+    .email_verifying{
+        width: 320px;
+        height: max-content;
+        margin-top: 200px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        margin-right: 15px;
+    }
+    .email_verifying h2{
+        margin-top: -1px;
+    }
+
+    .email_verifying p{
+        letter-spacing: .5px;
+        line-height: 1.2;
+        margin-top: -15px;
+    }
+    .email_verifying .confirm_btn{
+        line-height: 2;
+    }
+}  
+.manual_log {
+    background-color: #fff;
+    opacity: 1;
+    z-index: 1;
+    margin-right: 55px;
+    margin-top: 55px;
+    /* margin-left: 25px; */
+    padding-right: 55px;
+    padding-left: 55px;
+    padding-top: 20px;
+    width: 400px;
+    border-radius: 5px;
+    height: 600px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    /* margin: 55px 0px 0px 0px; */
+}
+.pop-up{
+    z-index: 99;
+    position: absolute;
+    background-color: #fff;
+    height: max-content;
+    background-color: rgb(236, 239, 245);
+    width: max-content;
+    padding:10px 10px 10px 10px;
+    line-height: 1.6;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #8c8a8a;
+    margin-top: 15px;
+    box-shadow: 1px 2px 2px #6e6e6e69;
+    display: none;
+    z-index: 2;
+}
+.triangle{
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+   
+
+    margin-top: -25px;
+   
+    background-color: rgb(236, 239, 245);
+    z-index: 1;
+    box-shadow: 150px 100px 25px  black;
+    
+}
+.active {
+    display: block;
+    transition: all 300ms ease-in-out;
+    height: max-content;
+}
+.valid{
+    color: rgb(78, 77, 77);
+    font-weight: 500;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+.matched{
+ 
+    color: red;
+  
+
+}
+
+
+.logo_badging {
+    display: none;
+
+}
+
+.logo_badging h3 {
+
+    color: #404040;
+    font-size: 25px;
+    margin-bottom: -10px;
+    margin-top: -2px;
+    margin-left: 10px;
+    display: none;
+
+}
+
+.logo_badging img {
+    margin-top: 6px;
+    display: none;
+}
+
+
+@media(max-width:1150px) {
+
+    .background {
+        display: none;
+    }
+
+    main {
+        /* text-align: center; */
+        display: grid;
+        justify-content: center;
+    }
+
+    .main2 {
+        width: 100%;
+    }
+
+    .logo_badging h3 {
+
+
+        display: block;
+
+    }
+
+    .logo_badging img {
+
+        display: block;
+    }
+
+}
+
+@media(max-width:890px) {
+
+    /* main{
+        
+        display: inline;
+      
+        
+    } */
+    /* .manual_log {
+        margin-left: -50px;
+    } */
+}
+
+@media(max-width:690px) {
+    /* .manual_log {
+        margin-left: -90px;
+    } */
+}   
+
+
+@media(max-width:550px) {
+    main {
+        display: inline;
+    }
+
+    .manual_log {
+        min-height: 630px;
+        /* box-sizing: border-box; */
+        padding: 20px;
+        display: inline-block;
+        margin: 0px;
+    }
+
+    body {
+        background-color: #fff;
+    }
+
+
+}
+
+
+
+
+
+.manual_log p,
+h2,
+label {
+    color: #000;
+
+}
+
+.logo_badging {
+    display: flex;
+}
+
+.main_form {
+
+    /* padding-top: -40px;   */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main_form h2 {
+    font-size: 32px;
+    color: #404040;
+}
+
+.create_newUser {
+    display: flex;
+    margin-top: -30px;
+}
+
+.create_newUser .text_user p {
+    color: #404040;
+}
+
+.create_newUser .create_user_link {
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.create_newUser .create_user_link a {
+    color: #1473e6;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+.create_newUser .create_user_link a:hover {
+    text-decoration: underline;
+}
+
+.main_form label {
+    color: #404040b1;
+   
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.main_form input {
+    border: none;
+    caret-color: #404040b0;
+    border-bottom: 1px solid #5454541f;
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+
+}
+ #cpp,#pp{
+    letter-spacing: 4px;
+    font-size: 15px;
+}
+
+.main_form input:focus {
+    outline: none;
+    font-size: 17px;
+    border-bottom: 2px solid #1473e6;
+
+}
+
+.main_form .email_field {
+    margin-top: 10px;
+}
+
+.main_form .password_field {
+    margin-top: 30px;
+}
+
+.main_form .submit {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.main_form .submit a {
+    color: #1473e6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.main_form .submit a:hover {
+    text-decoration: underline;
+}
+
+.main_form .submit .btn {
+    width: 90px;
+    height: 35px;
+    color: #fff;
+    background-color: #1473e6;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .8px;
+
+}
+.main_form .submit .btn:active{
+    transform: scale(.99);
+}
+
+.main_form .submit .btn:hover {
+    background-color: #065cc5;
+}
+
+.or_sec {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2.3;
+}
+
+.or_sec p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #404040;
+}
+
+.or_sec:after,
+.or_sec:before {
+    content: "";
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-bottom: 1px solid #97969643;
+
+}
+
+
+.auto_log {
+    line-height: 2.3;
+    width: 100%;
+    /* background-color: #000; */
+
+}
+
+.btn_google {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    justify-content: center;
+    text-align: center;
+}
+
+.btn_facebook {
+    width: 100%;
+    height: 50px;
+    /* background-color: #1473e6; */
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* .btn_auto .btn_btn {
+   display: flex;
+   background-color: #000;
+
+} */
+.btn_google .btn_btn {
+    width: 100%;
+    /* background-color: #1473e6; */
+}
+
+.auto_log .btn_google a {
+
+
+    background-color: #fff;
+    padding-left: 28.5%;
+    padding-right: 28.5%;
+    text-align: center;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+    border-radius: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(74, 73, 73, 0.141);
+    color: rgba(0, 0, 0, 0.686);
+}
+
+.btn_facebook .btn_btn {
+    width: 100%;
+    line-height: 4;
+    /* background-color: aqua; */
+
+}
+
+.auto_log .btn_facebook a {
+
+    width: 100%;
+    background-color: #1473e6;
+    padding-left: 27%;
+    border-radius: 50px;
+    padding-right: 27%;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 4.5%;
+    padding-bottom: 4.5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.auto_log img {
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.center_div {
+    display: block;
+}
+
+.signUp {
+    display: flex;
+    justify-content: center;
+
+}
+
+.signUp .google_signUp img {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+
+
+
+}
+
+.google_signUp {
+    border: 1px solid rgba(0, 0, 0, 0.297);
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    margin-right: 15px;
+    margin-top: 20px;
+
+
+}
+
+.signUp .facebook_signUp img {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 20px;
+
+}
+
+#onlineOffline {
+    background-color: #1473e6;
+    color: #fff;
+    margin: -20px;
+    padding-top: 1px;
+    width: 400px;
+    margin-left: -55px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-bottom: .1px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+
+}
+
+#onlineOffline p {
+    color: #fff;
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-left: 14px;
+}
+
+#onlineOffline i {
+    margin-top: 13px;
+    margin-left: -30px;
+}
+
+.bg_color {
+    background-color: rgba(0, 0, 0, 0.373);
+    width: 100%;
+   height: 100%;
+    padding-bottom: 40.5px;
+    
+
+}
+
+@media(max-width:550px) {
+   
+    .manual_log {
+        width: 460px;
+        height: 690px;
+        border-radius: 0px;
+    }
+    main{
+        display: grid;
+        
+        
+    }
+  
+    
+
+    /* .bg_color {
+        background-color: #fff;
+        opacity: 1;
+    }
+    body{
+        background-color: #fff;
+        background-image: ;
+
+    } */
+}
+
+
+
+
+
+/* air pad mini  */
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    body{
+        background: #000;
+    }
+    
+    .manual_log{
+        margin-top: 150px;
+    }
+  }
+  @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+    body{
+        background-color: #000;/* your css rules for ipad landscape */
+  }}
+
+
+
+  /* air pad pro  */
+  @media all and (device-width: 820px) and (device-height: 1180px) and (orientation:portrait) {
+    body{
+        background: #000;
+    }
+    .manual_log{
+        margin-top: 150px;
+    }
+  }
+  @media all and (device-width: 1180px) and (device-height: 820px) and (orientation:landscape) {
+    body{
+        background-color: #000;/* your css rules for ipad landscape */
+  }}
+
+
+  /* surface pro  */
+
+  @media all and (device-width: 912px) and (device-height: 1368px) and (orientation:portrait) {
+    body{
+        background: #000;
+    }
+    .manual_log{
+        margin-top: 150px;
+    }
+  }
+  @media all and (device-width: 1368px) and (device-height: 912px) and (orientation:landscape) {
+    body{
+        background-color: #000;/* your css rules for ipad landscape */
+  }}
+
+
+
+  /* surface duo  */
+
+  @media all and (device-width: 540px) and (device-height: 720px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+ 
+    .manual_log{
+        width:500px;
+        height: 720px;
+    }
+  }
+  @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+    body{
+        background-color: #000;/* your css rules for ipad landscape */
+  }}
+
+
+
+  /* iphone xr  */
+
+  @media all and (device-width: 414px) and (device-height: 896px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+   
+    .manual_log{
+        width:380px;
+        height: 896px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 25%;
+        padding-left: 25%;
+        
+    }
+  }
+
+
+  /* iphone se  */
+
+  
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+    /* .main2{
+        width: 100%;
+    } */
+    .manual_log{
+        width:345px;
+        height: 667px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 22%;
+        padding-left: 22%;
+        
+    }
+  }
+
+
+
+  /* iphone 12 pro  */
+
+
+
+  @media all and (device-width: 390px) and (device-height: 844px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+  
+    .manual_log{
+        width: 350px;
+        height: 844px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 22%;
+        padding-left: 22%;
+        
+    }
+  }
+
+
+  /* pixel 5  */
+
+  @media all and (device-width: 393px) and (device-height: 851px) and (orientation:portrait),  (device-width: 412px) and (device-height: 915px) and (orientation:portrait),(device-width: 412px) and (device-height: 914px) and (orientation:portrait){
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+    
+    .manual_log{
+        width: 355px;;
+        height: 915px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 22%;
+        padding-left: 22%;
+        
+    }
+  }
+
+
+  /* samsung s8+ */
+
+  @media all and (device-width: 360px) and (device-height: 740px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+    
+    .manual_log{
+        width:335px;
+        height: 740px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 21%;
+        padding-left: 21%;
+        
+    }
+  }
+
+
+/* s20 ultra */
+
+@media all and (device-width: 412px) and (device-height: 740px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+    
+    .manual_log{
+        width:400px;
+        height: 740px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 21%;
+        padding-left: 21%;
+        
+    }
+  }
+
+/* samsung fold  */
+  
+  @media all and (device-width: 280px) and (device-height: 653px) and (orientation:portrait) {
+    body{
+        background: #fff;
+        opacity: 1;
+    }
+ 
+    .manual_log{
+        width:250px;
+        height: 653px;
+    }
+    .auto_log .btn_google a, .auto_log .btn_facebook a {
+        padding-right: 13%;
+        padding-left: 13%;
+        
+    }
+  }
+
+
+
+  /* new hub max  */
+  @media all and (device-width: 1280px) and (device-height: 800px) and (orientation:landscape) {
+    body{
+        height: 800px;/* your css rules for ipad landscape */
+  }}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/sign_in.css'>
+    <!-- <script src='./asset/background.js'></script> -->
+    <script src="https://kit.fontawesome.com/c3d51c6cf4.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="back">
+    <!-- <div class="bg_color"> -->
+
+    <main>
+
+
+        <section class="background">
+            <div class="background_mage">
+
+
+
+
+
+            </div>
+            <div class="overlay">
+                <div class="overlay_logo">
+                    <img src="./asset/toppng.com-google-g-logo-icon-480x480.png">
+
+                </div>
+                <div class="overlay_brand_name">
+                    <h1>Google</h1>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="overlay_text" id="background2">
+                <p>Sign in or create an account.</p>
+            </div>
+
+        </section>
+<div class="Email_overlay" id="overlay"></div>
+       <div class="email_final">
+        <div class="email_verifying" style="display: none;" id="ver">
+            <div class="email_icon"><p></p>
+                <a onclick="closed()"  ><i class="fa-solid fa-xmark"  ></i></a>
+                        </div>
+            <div class="emial_head">
+                <h2>Confirm your email</h2>
+            </div>
+            <div class="emial_matter">
+                <p>Please click on the button below to validate your email and confirm that you are the owner of this
+                    account.</p>
+            </div>
+            <div class="confirm_btn">
+                <button class="btn">Verify</button>
+            </div>
+        </div>
+       </div>
+  
+
+        <section class="main2">
+            <!-- <div class="center_div"> -->
+            <section class="manual_log" id="main2">
+                <section class="login_form">
+                    <div class="main_form">
+                        <!-- <div id="onlineOffline">
+                            </i><p>Your computer seems to be offline. please check your internet and try again.</p>
+                        </div> -->
+
+                        <div class="logo_badging">
+                            <img src="./asset/toppng.com-google-g-logo-icon-480x480.png">
+                            <h3>Google</h3>
+                        </div>
+
+
+                        <div class="Sigin_text">
+                            <h2>Sign in</h2>
+                        </div>
+                        <div class="create_newUser">
+                            <div class="text_user">
+                                <p>New user?</p>
+                            </div>
+                            <div class="create_user_link">
+                                <a id="forword" onclick="forward()" style="cursor: pointer;">
+                                    Create an account
+                                </a>
+                            </div>
+                        </div>
+                        <div class="email_field">
+                            <div class="field_content">
+                                <label id="email">Email address</label><br>
+                                <input class="input_email" for="email" name="Email_field" type="email">
+                            </div>
+                        </div>
+
+                        <div class="password_field">
+                            <div class="field_content">
+                                <label id="password">Password</label><br>
+                                <input class="input_password" for="password" name="password_field" type="password">
+                            </div>
+                        </div>
+
+                        <div class="submit">
+                            <div class="forgotten">
+                                <a href="./resetPassword.html">Reset password</a>
+                            </div>
+                            <div class="submit_btn">
+                                <a  style="width: 100%;"><input class="btn" type="submit" value="Continue" onclick="verify()"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="or_sec">
+                        <p class="or_p"> Or </p>
+                    </div>
+                </section>
+                <section class="auto_log">
+                    <div class="btn_auto">
+                        <div class="btn_google">
+                            <!-- <div class="btn_img">
+                                
+                            </div> -->
+                            <div class="btn_btn">
+
+                                <a href="" class="google"><img
+                                        src="./asset/toppng.com-google-g-logo-icon-480x480.png"><span>Continue with
+                                        Google</span> </a>
+                            </div>
+                        </div>
+                        <div class="btn_facebook">
+                            <!-- <div class="btn_img">
+
+                               
+                            </div> -->
+                            <div class="btn_btn">
+
+                                <a href="" class="facebook"><img src="./asset/Facebook_Logo_(2019)l.png"><span>Continue
+                                        with Facebook</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+
+
+
+
+            <!-- <! sign_up -->
+            <section class="manual_log" style="display: none; transition: opacity 2s;" id="main3">
+                <section class="login_form">
+                    <div class="main_form">
+                        <!-- <div id="off">
+                            </i><p>Your computer seems to be offline. please check your internet and try again.</p>
+                        </div> -->
+
+                        <div class="logo_badging">
+                            <img src="./asset/toppng.com-google-g-logo-icon-480x480.png">
+                            <h3>Google</h3>
+                        </div>
+
+
+                        <div class="Sigin_text">
+                            <h2>Sign up</h2>
+                        </div>
+                        <div class="create_newUser">
+                            <div class="text_user">
+                                <p>Already have an Account?</p>
+                            </div>
+                            <div class="create_user_link">
+                                <a onclick="signIn()">
+                                    Sign in
+                                </a>
+                            </div>
+                        </div>
+                        <form method="post">
+                            <div class="email_field">
+                                <div class="field_content">
+                                    <label id="email">Email address</label><br>
+                                    <input class="input_email" for="email" name="Rrg_Email_field" type="email" required
+                                        autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="password_field">
+                                <div class="field_content">
+                                    <label id="password">Password</label><br>
+                                    <input class="input_password" for="password" name="Reg_password_field"
+                                        type="password" id="pp">
+                                </div>
+                                <div class="pop-up" id="popup">
+                                    <div class="triangle"></div>
+
+                                    <div class="character" id="character">
+                                        At least 8 characters
+                                    </div>
+
+                                    <div class="numbers" id="numbers">
+                                        Must contain numbers
+
+                                    </div>
+
+                                    <div class="capital" id="capital">
+                                        A mixture of both uppercase and lowercase letters
+
+                                    </div>
+
+                                    <div class="special" id="special">
+                                        Inclusion of at least one special character, e.g., ! @ # ? ]
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="password_field">
+                                <div class="field_content">
+                                    <label id="password">Confirm Password</label><br>
+                                    <input class="input_password" for="password" name="Reg_ConfirmPassword_field"
+                                        type="password" id="cpp">
+                                </div>
+                            </div>
+
+                            <div class="submit">
+                                <div class="forgotten">
+                                    <a></a>
+                                </div>
+                                <div class="submit_btn" style="float: right;">
+                                    <a href="" style="width: 100%; "><input class="btn" type="submit" 
+                                            value="Continue"></a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="or_sec">
+                        <p class="or_p"> Or </p>
+                    </div>
+                </section>
+
+
+                <div class="signUp">
+                    <div class="google_signUp">
+                        <a href=""><img src="./asset/toppng.com-google-g-logo-icon-480x480.png"></a>
+                    </div>
+                    <div class="facebook_signUp">
+                        <a href=""><img src="./asset/Facebook_Logo_(2019).png"></a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- <section class="auto_log">
+                        <div class="btn_auto">
+                            <div class="btn_google">
+                               
+                                <div class="btn_btn">
+
+                                    <a href="" class="google"><img
+                                            src="./toppng.com-google-g-logo-icon-480x480.png"><span>Continue with
+                                            Google</span> </a>
+                                </div>
+                            </div>
+                            <div class="btn_facebook">
+                                
+                                <div class="btn_btn">
+
+                                    <a href="" class="facebook"><img src="./Facebook_Logo_(2019)l.png"><span>Continue
+                                            with Facebook</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section> -->
+            </section>
+            <!-- </div> -->
+        </section>
+    </main>
+    <!-- </div> -->
+    <!-- <button onclick="jj()">hello</button> -->
+
+    <!-- 
+    <script type="text/javascript">
+        var line = document.getElementById('onlineOffline');
+
+        window.addEventListener("online", function () {
+            line.style.display = 'none';
+
+        });
+
+        window.addEventListener("offline", function(){
+            line.style.display='block';
+            
+
+        });
+    </script> -->
+
+
+    <script>
+        var pp = document.getElementById('pp')
+        var pop_up = document.getElementById('popup')
+
+        pp.addEventListener("focus", function () {
+            pop_up.classList.add('active')
+        })
+
+        pp.addEventListener("blur", function () {
+            pop_up.classList.remove('active')
+        })
+
+
+
+
+
+    </script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#cpp").keyup(checkPasswordMatch);
+        });
+        function checkPasswordMatch() {
+            var password = $("#pp").val();
+            var confirmPassword = $("#cpp").val();
+            var red = document.getElementById('cpp');
+
+            if (password != confirmPassword) {
+
+                red.style.color = 'red'
+
+            }
+
+            else {
+
+                red.style.color = '#000';
+
+
+
+            }
+
+
+        }
+    </script>
+    <script type="text/javascript" src="./js/background.js"></script>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+        var main2 = document.getElementById('main2');
+        var main3 = document.getElementById('main3');
+
+
+
+        function forward() {
+            main2.style.display = 'none';
+            main3.style.display = 'block';
+            history.pushState({ id: 1 }, '${id}');
+
+        }
+        window.addEventListener("popstate", e => {
+
+            main3.style.display = 'none';
+            main2.style.display = 'block';
+
+
+
+        });
+
+
+
+        history.replaceState({ id: null }, 'Default state')
+
+    </script>
+
+    <script type="text/javascript">
+        function signIn() {
+            // main3.style.opacity='0';
+            main3.style.display = 'none';
+            main2.style.display = 'block';
+
+            history.pushState({ id: 2 }, '${id}');
+        }
+
+        // window.addEventListener("popstate", e => {
+
+        //     main3.style.display = 'block';
+        //     main2.style.display = 'none';
+
+
+
+        // });
+    </script>
+
+
+
+</body>
+
+</html>

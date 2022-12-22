@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        .pop-up{
+            background-color: #fff;
+            height: max-content;
+            /* border: 1px solid #404040; */
+            background-color: rgb(242, 243, 245);
+            width: max-content;
+            padding:15px 25px 15px 25px;
+            line-height: 1.6;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #505050;
+            /* margin: auto;   */
+            display: none;
+            /* position: relative; */
+            /* margin-top: 20%;
+            margin-left: 50%; */
+            /* overflow: hidden; */
+            z-index: 2;
+            
+        }
+        input #pp{
+            z-index: 1;
+        }
+        .pop-up.active {
+            display: block;
+            
+            transition: all 300ms ease-in-out;
+            /* transform: translate(-50%, -50%)scale(1); */
+            height: max-content;
+            
+            
+        }
+        .overlay{
+           
+            height: 20px;
+            width: 20px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            /* position: absolute; */
+
+            margin-top: -25px;
+            /* border: 1px solid #0a0a0a; */
+            background-color: rgb(242, 243, 245);
+            z-index: 1;
+            box-shadow: 150px 100px 25px  black;
+            /* background-color: aqua; */
+           
+        }
+       
+    
+    </style>
+</head>
+<body>
+    
+    <div class="pop-up" id="popup">
+        <div class="overlay"></div>
+        
+            <div class="character">
+                At least 8 characters
+            </div>
+    
+            <div class="capital">
+                A mixture of both uppercase and lowercase letters
+    
+            </div>
+            <div class="numbers">
+                A mixture of letters and numbers
+    
+            </div>
+            <div class="special">
+                Inclusion of at least one special character, e.g., ! @ # ? ]
+            </div>
+            
+        
+    </div>
+    
+    
+<form method="post">
+    <input type="password" name="password" onclick="toggle()" id="pp" required>
+    <input type="submit" value="submit"></form>
+
+
+    <script>
+        var pp = document.getElementById('pp')
+        var pop_up = document.getElementById('popup')
+
+        pp.addEventListener("focus",function(){
+            pop_up.classList.add('active')
+        })
+
+        pp.addEventListener("blur",function(){
+            pop_up.classList.remove('active')
+        })
+
+        
+
+    </script>
+</body>
+</html>
+
+
